@@ -1,12 +1,6 @@
 import { colors } from "@/constants";
 import React from "react";
-import {
-  Pressable,
-  PressableProps,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Pressable, PressableProps, StyleSheet, Text } from "react-native";
 
 interface CustomButtonProps extends PressableProps {
   label: string;
@@ -43,7 +37,7 @@ const styles = StyleSheet.create({
   },
   large: {
     width: "100%",
-    height: 40,
+    height: 44,
   },
   medium: {},
   filled: {
