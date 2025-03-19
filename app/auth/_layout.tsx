@@ -23,7 +23,16 @@ export default function AuthLayout() {
             </Link>
           ),
         }}
-      ></Stack.Screen>
+      />
+
+      <Stack.Screen
+        name="login"
+        options={{
+          title: "이메일 로그인",
+          headerShown: true,
+          headerTitleAlign: "center",
+        }}
+      />
     </Stack>
   );
 }
