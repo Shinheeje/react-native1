@@ -2,16 +2,23 @@ import { colors } from "@/constants";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Octicons, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { Post } from "@/types";
+import Profile from "./Profile";
 
 interface FeedItemProps {
   post: Post;
 }
 
 function FeedItem({ post }: FeedItemProps) {
-  const isLiked = false;
+  const isLiked = true;
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
+        <Profile
+          imageUrl={post.author.imageUri}
+          nickname={post.author.nickname}
+          createdAt={post.createdAt}
+          onPress={() => {}}
+        />
         <Text style={styles.title}>{post.title}</Text>
         <Text numberOfLines={3} style={styles.description}>
           {post.description}
